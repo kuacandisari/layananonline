@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistem Informasi Layanan KUA Candisari</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        kemenag: {
+                            500: '#008b4b',
+                            600: '#006d3b',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-gray-50 flex flex-col min-h-screen relative">
+    <!-- Navbar -->
+    <nav class="bg-kemenag-500 text-white shadow-lg sticky top-0 z-40">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-16">
+                <div class="flex items-center">
+                    <i class="fas fa-mosque text-2xl mr-3"></i>
+                    <span class="font-bold text-xl">KUA Candisari</span>
+                </div>
+                <div class="hidden md:flex items-center space-x-6">
+                    <a href="#" class="hover:text-gray-200 transition-colors">Beranda</a>
+                    <a href="#jadwal" class="hover:text-gray-200 transition-colors">Jadwal Nikah</a>
+                    <a href="#layanan" class="hover:text-gray-200 transition-colors">Layanan</a>
+                    <a href="#kontak" class="hover:text-gray-200 transition-colors">Kontak</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-white border-b">
+        <div class="max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8 flex flex-col items-center text-center">
+            <!-- Icon/Logo -->
+            <div class="w-24 h-24 bg-green-100 rounded-full flex items-center justify-center text-kemenag-500 text-5xl mb-6 shadow-sm">
+                <i class="fas fa-kaaba"></i>
+            </div>
+            <h1 class="text-4xl font-extrabold text-gray-900 sm:text-5xl sm:tracking-tight lg:text-6xl">
+                Portal Layanan Integrasi<br><span class="text-kemenag-500 mt-2 block">KUA Candisari</span>
+            </h1>
+            <p class="mt-5 max-w-xl text-xl text-gray-500">
+                Pusat informasi dan akses cepat berbagai layanan keagamaan di wilayah Kecamatan Candisari, Kota Semarang.
+            </p>
+        </div>
+    </div>
+
+    <!-- Dashboard Jadwal Nikah -->
+    <div id="jadwal" class="bg-gray-100 py-12 border-b">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-8">
+                <h2 class="text-3xl font-bold text-gray-900">Dashboard Jadwal Nikah</h2>
+                <p class="mt-2 text-gray-600">Informasi pelaksanaan akad nikah harian di wilayah KUA Candisari</p>
+            </div>
+            
+            <div class="bg-white rounded-2xl shadow-lg p-4 md:p-6 w-full overflow-hidden">
+                <!-- 
+                  TIPS UNTUK ADMIN:
+                  Ganti URL pada 'src' di dalam iframe ini dengan link Embed Google Calendar milik KUA Anda.
+                  Cara mendapatkan link: Buka Google Calendar di Laptop -> Settings -> Pilih Kalender -> Integrate Calendar -> Copy URL dari bagian "Embed code" atau "Public URL to this calendar".
+                -->
+                <div class="relative w-full h-[500px] md:h-[600px] rounded-xl overflow-hidden border border-gray-200">
+                    <iframe 
+                        src="https://calendar.google.com/calendar/embed?height=600&wkst=2&bgcolor=%23ffffff&ctz=Asia%2FJakarta&showTitle=0&showNav=1&showDate=1&showPrint=0&showTabs=1&showCalendars=0&showTz=0&mode=AGENDA&src=ZW4uaW5kb25lc2lhbiNob2xpZGF5QGdyb3VwLnYuY2FsZW5kYXIuZ29vZ2xlLmNvbQ&color=%23008b4b" 
+                        style="border:solid 1px #777" 
+                        width="100%" 
+                        height="100%" 
+                        frameborder="0" 
+                        scrolling="no">
+                    </iframe>
+                </div>
+                <div class="mt-4 text-sm text-gray-500 flex items-center">
+                    <i class="fas fa-info-circle mr-2 text-blue-500"></i>
+                    Jadwal di atas diperbarui secara otomatis oleh petugas admin KUA Candisari.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Layanan / Shortcuts -->
+    <div id="layanan" class="flex-grow max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 w-full">
+        <h2 class="text-3xl font-bold text-center text-gray-900 mb-10">Pilih Layanan Lainnya</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            
+            <!-- Shortcut SIMKAH 4 -->
+            <a href="https://simkah4.kemenag.go.id/" target="_blank" class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-kemenag-500 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-green-100 text-kemenag-500 rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-kemenag-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-ring"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Pendaftaran Nikah (SIMKAH)</h3>
+                <p class="text-gray-600 text-sm flex-grow">Akses portal SIMKAH 4 Kemenag untuk pendaftaran kehendak nikah secara online.</p>
+                <div class="mt-4 text-kemenag-500 font-semibold text-sm group-hover:underline">
+                    Buka SIMKAH 4 <i class="fas fa-external-link-alt ml-1"></i>
+                </div>
+            </a>
+
+            <!-- Shortcut Rekomendasi Nikah -->
+            <a href="#" class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-indigo-500 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-indigo-100 text-indigo-500 rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-indigo-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-file-signature"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Rekomendasi Nikah (Numpang)</h3>
+                <p class="text-gray-600 text-sm flex-grow">Layanan surat rekomendasi pindah nikah. Isi form pendataan awal di sini.</p>
+                <div class="mt-4 text-indigo-500 font-semibold text-sm group-hover:underline">
+                    Isi Google Form <i class="fas fa-external-link-alt ml-1"></i>
+                </div>
+            </a>
+
+            <!-- Shortcut Legalisir -->
+            <a href="#" class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-yellow-500 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-yellow-100 text-yellow-500 rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-yellow-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-stamp"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Legalisir Buku Nikah</h3>
+                <p class="text-gray-600 text-sm flex-grow">Informasi persyaratan dan pendaftaran legalisir buku/kutipan akta nikah.</p>
+                <div class="mt-4 text-yellow-500 font-semibold text-sm group-hover:underline">
+                    Daftar Antrean <i class="fas fa-external-link-alt ml-1"></i>
+                </div>
+            </a>
+
+            <!-- Shortcut Konsultasi -->
+            <a href="#" class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-purple-500 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-purple-100 text-purple-500 rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-purple-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-users"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Konsultasi Keluarga Sakinah</h3>
+                <p class="text-gray-600 text-sm flex-grow">Pendaftaran sesi bimbingan BP4 atau konsultasi syariah keagamaan.</p>
+                <div class="mt-4 text-purple-500 font-semibold text-sm group-hover:underline">
+                    Jadwalkan Sesi <i class="fas fa-external-link-alt ml-1"></i>
+                </div>
+            </a>
+
+            <!-- Shortcut Wakaf -->
+            <a href="#" class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-teal-500 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-teal-100 text-teal-500 rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-teal-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-hand-holding-heart"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Layanan Wakaf & Masjid</h3>
+                <p class="text-gray-600 text-sm flex-grow">Informasi dan formulir pengajuan Akta Ikrar Wakaf (AIW) serta pendataan Masjid/Musala.</p>
+                <div class="mt-4 text-teal-500 font-semibold text-sm group-hover:underline">
+                    Info Lengkap <i class="fas fa-external-link-alt ml-1"></i>
+                </div>
+            </a>
+            
+            <!-- Shortcut Pengaduan -->
+            <a href="#" class="bg-white rounded-xl shadow-md hover:shadow-xl transition-shadow duration-300 p-6 border-t-4 border-red-500 flex flex-col items-center text-center group">
+                <div class="w-16 h-16 bg-red-100 text-red-500 rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-red-500 group-hover:text-white transition-colors duration-300">
+                    <i class="fas fa-bullhorn"></i>
+                </div>
+                <h3 class="text-xl font-bold text-gray-900 mb-2">Layanan Pengaduan</h3>
+                <p class="text-gray-600 text-sm flex-grow">Kirimkan saran, masukan, atau aduan mengenai layanan di KUA Candisari.</p>
+                <div class="mt-4 text-red-500 font-semibold text-sm group-hover:underline">
+                    Isi Laporan <i class="fas fa-external-link-alt ml-1"></i>
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/6282221280538?text=Halo%20Admin%20KUA%20Candisari,%20saya%20ingin%20bertanya%20mengenai%20layanan%20KUA..." 
+       target="_blank" 
+       class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full shadow-2xl hover:bg-[#20b858] hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center group" 
+       title="Hubungi Admin KUA via WhatsApp">
+        <i class="fab fa-whatsapp text-4xl"></i>
+        <!-- Tooltip Text for Desktop -->
+        <span class="absolute right-20 bg-gray-800 text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none hidden md:block">
+            Hubungi Admin KUA
+        </span>
+    </a>
+
+    <!-- Footer -->
+    <footer id="kontak" class="bg-gray-800 text-white mt-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <div>
+                    <h4 class="text-xl font-bold mb-4">KUA Kecamatan Candisari</h4>
+                    <p class="text-gray-400 text-sm mb-2"><i class="fas fa-map-marker-alt w-5"></i> Jl. Cinde Barat, Jomblang, Kec. Candisari, Kota Semarang</p>
+                    <p class="text-gray-400 text-sm mb-2"><i class="fas fa-phone w-5"></i> (024) XXXXXXX</p>
+                    <p class="text-gray-400 text-sm mb-2"><i class="fas fa-envelope w-5"></i> kua.candisari@kemenag.go.id</p>
+                </div>
+                <div class="flex flex-col items-start md:items-end">
+                    <h4 class="text-xl font-bold mb-4">Jam Operasional</h4>
+                    <p class="text-gray-400 text-sm mb-1">Senin - Kamis: 07.30 - 16.00 WIB</p>
+                    <p class="text-gray-400 text-sm mb-1">Jumat: 07.30 - 16.30 WIB</p>
+                    <p class="text-gray-400 text-sm mt-4 text-yellow-500"><em>Sabtu, Minggu & Libur Nasional Tutup</em></p>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-8 pt-8 text-center text-sm text-gray-400">
+                &copy; 2026 KUA Kecamatan Candisari, Kota Semarang. Dikelola secara mandiri.
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
