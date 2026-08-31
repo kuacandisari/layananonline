@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>KUA Candisari Online</title>
+    <title>Portal Layanan Digital - KUA Candisari</title>
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -48,17 +48,37 @@
 </head>
 <body class="font-sans bg-gray-50 text-gray-800 antialiased flex flex-col min-h-screen relative">
 
+    <!-- POPUP GREETING -->
+    <div id="greetingPopup" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-500 backdrop-blur-sm px-4">
+        <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center transform scale-90 transition-transform duration-500 relative">
+            <button onclick="closePopup()" class="absolute top-4 right-5 text-gray-400 hover:text-gray-700 transition-colors">
+                <i class="fas fa-times text-xl"></i>
+            </button>
+            <div class="w-20 h-20 bg-green-50 text-kemenag-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-5 border-4 border-green-100">
+                <i class="fas fa-handshake"></i>
+            </div>
+            <h3 class="text-2xl font-extrabold text-gray-900 mb-2">Selamat Datang!</h3>
+            <p class="text-gray-500 text-sm mb-8 leading-relaxed">
+                Kami siap melayani kebutuhan administrasi dan bimbingan keagamaan Anda dengan profesional dan sepenuh hati.
+            </p>
+            <button onclick="closePopup()" class="w-full bg-kemenag-500 text-white font-bold py-3.5 px-4 rounded-xl hover:bg-kemenag-600 hover:shadow-lg transition-all active:scale-95">
+                Mulai Jelajahi Layanan
+            </button>
+        </div>
+    </div>
+
     <!-- 1. HERO SECTION -->
     <header class="bg-gradient-to-br from-kemenag-600 to-kemenag-500 text-white relative overflow-hidden">
         <div class="absolute inset-0 opacity-10 bg-[url('https://www.transparenttextures.com/patterns/arabesque.png')]"></div>
         
         <div class="relative max-w-6xl mx-auto px-4 py-16 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg border-4 border-white/20 overflow-hidden p-2">
+            <div class="w-24 h-24 bg-white rounded-full flex items-center justify-center mb-6 shadow-lg border-4 border-white/20 overflow-hidden p-2 hover:scale-105 transition-transform duration-300">
                 <img src="https://upload.wikimedia.org/wikipedia/commons/4/41/Logo_Kementerian_Agama_Republik_Indonesia.png" alt="Logo Kemenag" class="w-full h-full object-contain">
             </div>
             
-            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-3">
-                KUA Candisari Online<br>
+            <h1 class="text-3xl md:text-5xl font-extrabold tracking-tight mb-3 leading-tight">
+                Portal Layanan Digital<br>
+                <span class="text-kemenag-100 text-2xl md:text-4xl">KUA Kecamatan Candisari</span>
             </h1>
             
             <p class="text-lg md:text-xl font-medium text-kemenag-50 mb-6 italic">
@@ -66,10 +86,10 @@
             </p>
             
             <p class="max-w-3xl text-base md:text-lg text-white/90 mb-8 leading-relaxed">
-                Pusat Informasi Digital Terpadu untuk kemudahan akses layanan keagamaan bagi masyarakat di wilayah Candi, Jatingaleh, Kaliwiru, Wonotingal, Jomblang, Karanganyar Gunung, dan Tegalsari.
+                Pusat Informasi Terpadu untuk kemudahan akses layanan keagamaan bagi masyarakat di wilayah Candi, Jatingaleh, Kaliwiru, Wonotingal, Jomblang, Karanganyar Gunung, dan Tegalsari.
             </p>
             
-            <div class="inline-flex items-center bg-black/20 rounded-full px-4 py-2 text-sm text-white/90 backdrop-blur-sm shadow-sm border border-white/10">
+            <div class="inline-flex items-center bg-black/20 rounded-full px-4 py-2 text-sm text-white/90 backdrop-blur-sm shadow-sm border border-white/10 hover:bg-black/30 transition-colors cursor-default">
                 <i class="fas fa-map-marker-alt mr-2 text-kemenag-100"></i>
                 <span class="truncate">Jl. Taman Teuku Umar No. 02, Tinjomoyo, Banyumanik, Kota Semarang.</span>
             </div>
@@ -80,73 +100,54 @@
 
         <!-- 2. QUICK ACTION BUTTONS -->
         <section aria-label="Menu Utama" class="-mt-20 relative z-10">
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-5">
+            <!-- Diubah menjadi 4 kolom untuk menambahkan Daftar Nikah (SIMKAH) -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 
-                <!-- Primary Action (Jadwal Nikah) -->
-                <a href="https://sites.google.com/view/jadwalnikahkuacandisari?usp=sharing" class="group bg-white rounded-2xl shadow-xl p-6 flex flex-col items-center justify-center border-b-4 border-kemenag-500 hover:-translate-y-1 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="absolute top-4 right-4 flex items-center">
+                <!-- Action 1 (SIMKAH) -->
+                <a href="https://simkah4.kemenag.go.id/" target="_blank" class="group bg-white rounded-2xl shadow-xl p-5 md:p-6 flex flex-col items-center justify-center border-b-4 border-yellow-500 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-yellow-50 text-yellow-600 rounded-full flex items-center justify-center text-2xl md:text-3xl mb-3 md:mb-4 group-hover:bg-yellow-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
+                        <i class="fas fa-ring"></i>
+                    </div>
+                    <h3 class="text-sm md:text-lg font-extrabold text-gray-900 text-center leading-tight">Daftar Nikah<br>Online (SIMKAH)</h3>
+                </a>
+
+                <!-- Action 2 (Jadwal Nikah) -->
+                <a href="https://script.google.com/macros/s/AKfycbxqEB5rCGInrYultYfmfVWCmfWTVTRDUPpfJLEJQiSgV0UfLs6ayukYgjVOY1I15gp7/exec" target="_blank" class="group bg-white rounded-2xl shadow-xl p-5 md:p-6 flex flex-col items-center justify-center border-b-4 border-kemenag-500 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
+                    <!-- Animasi ping Live Data (Hanya tampil di layar agak besar agar tidak penuh di HP) -->
+                    <div class="hidden md:flex absolute top-4 right-4 items-center">
                         <span class="relative flex h-3 w-3">
                           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
                           <span class="relative inline-flex rounded-full h-3 w-3 bg-kemenag-500"></span>
                         </span>
-                        <span class="text-[10px] text-gray-400 font-semibold ml-2 uppercase tracking-wide">Live Data</span>
+                        <span class="text-[10px] text-gray-400 font-semibold ml-2 uppercase tracking-wide">Live</span>
                     </div>
                     
-                    <div class="w-16 h-16 bg-green-50 text-kemenag-500 rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-kemenag-500 group-hover:text-white transition-colors duration-300">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-green-50 text-kemenag-500 rounded-full flex items-center justify-center text-2xl md:text-3xl mb-3 md:mb-4 group-hover:bg-kemenag-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                         <i class="fas fa-calendar-check"></i>
                     </div>
-                    <h3 class="text-lg font-extrabold text-gray-900 text-center leading-tight">Cek Jadwal Nikah<br>Digital</h3>
+                    <h3 class="text-sm md:text-lg font-extrabold text-gray-900 text-center leading-tight">Cek Jadwal<br>Nikah Digital</h3>
                 </a>
 
-                <!-- Action 2 (WhatsApp) -->
-                <a href="https://wa.me/6282221280538?text=Assalamualaikum%20KUA%20Candisari%2C%20saya%20mau%20konsultasi%20..." target="_blank" class="group bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center border-b-4 border-green-500 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-green-50 text-green-500 rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-green-500 group-hover:text-white transition-colors duration-300">
+                <!-- Action 3 (WhatsApp) -->
+                <a href="https://wa.me/6282221280538?text=Assalamualaikum%20KUA%20Candisari%2C%20saya%20mau%20konsultasi%20..." target="_blank" class="group bg-white rounded-2xl shadow-lg p-5 md:p-6 flex flex-col items-center justify-center border-b-4 border-green-500 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-green-50 text-green-500 rounded-full flex items-center justify-center text-2xl md:text-3xl mb-3 md:mb-4 group-hover:bg-green-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                         <i class="fab fa-whatsapp"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 text-center leading-tight">Layanan Konsultasi<br>Online (WhatsApp)</h3>
+                    <h3 class="text-sm md:text-lg font-bold text-gray-900 text-center leading-tight">Konsultasi<br>Online (WA)</h3>
                 </a>
 
-                <!-- Action 3 (Sosial Media) -->
-                <a href="#" class="group bg-white rounded-2xl shadow-lg p-6 flex flex-col items-center justify-center border-b-4 border-blue-500 hover:-translate-y-1 hover:shadow-xl transition-all duration-300">
-                    <div class="w-16 h-16 bg-blue-50 text-blue-500 rounded-full flex items-center justify-center text-3xl mb-4 group-hover:bg-blue-500 group-hover:text-white transition-colors duration-300">
+                <!-- Action 4 (Sosial Media) -->
+                <a href="https://instagram.com/kua.candisari" target="_blank" class="group bg-white rounded-2xl shadow-lg p-5 md:p-6 flex flex-col items-center justify-center border-b-4 border-pink-500 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300">
+                    <div class="w-14 h-14 md:w-16 md:h-16 bg-pink-50 text-pink-500 rounded-full flex items-center justify-center text-2xl md:text-3xl mb-3 md:mb-4 group-hover:bg-gradient-to-br group-hover:from-purple-500 group-hover:to-pink-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
                         <i class="fab fa-instagram"></i>
                     </div>
-                    <h3 class="text-lg font-bold text-gray-900 text-center leading-tight">Sosial Media<br>KUA Candisari</h3>
+                    <h3 class="text-sm md:text-lg font-bold text-gray-900 text-center leading-tight">Sosial Media<br>@kua.candisari</h3>
                 </a>
             </div>
         </section>
 
-        <!-- DASHBOARD JADWAL NIKAH (APPS SCRIPT) -->
-        <!-- Rekomendasi penempatan: Tepat di bawah Quick Actions, agar setelah user klik tombol "Cek Jadwal", layar langsung scroll perlahan ke bagian ini. -->
-        <section id="dashboard-jadwal" class="pt-8 scroll-mt-6">
-            <div class="bg-white rounded-3xl shadow-lg border border-gray-200 overflow-hidden">
-                <div class="bg-gray-50 border-b border-gray-200 p-4 px-6 flex justify-between items-center">
-                    <h2 class="text-xl font-bold text-gray-900 flex items-center">
-                        <i class="fas fa-desktop text-kemenag-500 mr-3"></i> Dashboard Jadwal Nikah
-                    </h2>
-                    <span class="text-xs font-semibold bg-green-100 text-green-700 px-3 py-1 rounded-full"><i class="fas fa-circle text-[8px] mr-1 animate-pulse"></i>Terhubung</span>
-                </div>
-                <div class="p-2 md:p-4 bg-gray-100 w-full h-[500px] md:h-[600px] relative">
-                    <!-- Ganti link src di bawah dengan link Google Sites / Web App Script Jadwal Anda -->
-                    <iframe 
-                        src="https://script.google.com/macros/s/AKfycbxqEB5rCGInrYultYfmfVWCmfWTVTRDUPpfJLEJQiSgV0UfLs6ayukYgjVOY1I15gp7/exec" 
-                        class="w-full h-full rounded-xl border border-gray-300 bg-white" 
-                        title="Dashboard Jadwal Nikah App Script"
-                        loading="lazy">
-                    </iframe>
-                    
-                    <!-- Hapus blok div placeholder di bawah ini jika iframe sudah diisi link aslinya -->
-                    <div class="absolute inset-0 flex flex-col items-center justify-center bg-white m-2 md:m-4 rounded-xl border border-gray-300 text-gray-400">
-                        <i class="fas fa-code text-5xl mb-4"></i>
-                        <p class="text-lg">Dashboard Google Apps Script akan tampil di sini</p>
-                        <p class="text-sm mt-2 text-center max-w-md">Edit file HTML dan ubah bagian <code class="bg-gray-100 px-2 py-1 text-red-500 rounded">src="..."</code> pada iframe dengan link App Script Jadwal Anda.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 3. SERVICE INFORMATION HUB (DIKEMBANGKAN MENJADI 6 KARTU) -->
-        <section id="informasi-layanan" class="pt-8">
+        <!-- 3. SERVICE INFORMATION HUB -->
+        <section id="informasi-layanan" class="pt-4">
             <div class="text-center mb-10">
                 <h2 class="text-2xl md:text-3xl font-bold text-gray-900 mb-3">Pusat Informasi Layanan KUA</h2>
                 <div class="h-1 w-16 bg-kemenag-500 mx-auto rounded-full"></div>
@@ -156,8 +157,8 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
                 
                 <!-- Card 1: Nikah & Rujuk -->
-                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
-                    <div class="w-12 h-12 bg-kemenag-50 text-kemenag-500 rounded-xl flex items-center justify-center text-2xl mb-5">
+                <div class="group bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-kemenag-50 text-kemenag-500 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-kemenag-500 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-ring"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4 line-clamp-2">Pendaftaran Nikah & Rujuk</h3>
@@ -166,15 +167,14 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Alur pendaftaran online SIMKAH</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Urutan nasab wali nikah</span></li>
                     </ul>
-                    <!-- Contoh link download berkas -->
-                    <a href="LINK_GDRIVE_BERKAS_N1_N10" target="_blank" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-kemenag-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-kemenag-50 transition-colors">
-                        <i class="fas fa-download mr-2"></i> Download Blangko N1-N10
+                    <a href="#" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-kemenag-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-kemenag-500 hover:text-white transition-colors duration-300">
+                        <i class="fas fa-download mr-2"></i> Download Blangko
                     </a>
                 </div>
 
                 <!-- Card 2: Pasca-Nikah & Khusus -->
-                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
-                    <div class="w-12 h-12 bg-kemenag-50 text-kemenag-500 rounded-xl flex items-center justify-center text-2xl mb-5">
+                <div class="group bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-kemenag-50 text-kemenag-500 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-kemenag-500 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-file-signature"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4 line-clamp-2">Administrasi Pasca-Nikah</h3>
@@ -183,14 +183,14 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Rekomendasi Nikah (Pindah Nikah)</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Prosedur Nikah Campuran (WNI/WNA)</span></li>
                     </ul>
-                    <a href="LINK_GDRIVE_PANDUAN_ADMINISTRASI" target="_blank" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-kemenag-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-kemenag-50 transition-colors">
+                    <a href="#" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-kemenag-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-kemenag-500 hover:text-white transition-colors duration-300">
                         <i class="fas fa-file-alt mr-2"></i> Panduan & Syarat
                     </a>
                 </div>
 
                 <!-- Card 3: Bimbingan & Konsultasi -->
-                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
-                    <div class="w-12 h-12 bg-kemenag-50 text-kemenag-500 rounded-xl flex items-center justify-center text-2xl mb-5">
+                <div class="group bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-kemenag-50 text-kemenag-500 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-kemenag-500 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-users"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4 line-clamp-2">Bimbingan & Konsultasi</h3>
@@ -199,14 +199,14 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Konsultasi Keluarga Sakinah / BP4</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Konsultasi Syariah & Keagamaan</span></li>
                     </ul>
-                    <a href="LINK_FORM_PENDAFTARAN_BIMBINGAN" target="_blank" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-kemenag-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-kemenag-50 transition-colors">
+                    <a href="#" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-kemenag-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-kemenag-500 hover:text-white transition-colors duration-300">
                         <i class="fas fa-link mr-2"></i> Form Pendaftaran
                     </a>
                 </div>
                 
                 <!-- Card 4: Kemasjidan (SIMAS) -->
-                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
-                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center text-2xl mb-5">
+                <div class="group bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-blue-50 text-blue-500 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-blue-500 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-mosque"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4 line-clamp-2">Layanan Kemasjidan (SIMAS)</h3>
@@ -215,14 +215,14 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Pengukuran Arah Kiblat</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-blue-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Pembinaan Takmir Masjid</span></li>
                     </ul>
-                    <a href="LINK_PANDUAN_SIMAS" target="_blank" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-blue-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-blue-50 transition-colors">
+                    <a href="#" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-blue-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-blue-500 hover:text-white transition-colors duration-300">
                         <i class="fas fa-info-circle mr-2"></i> Info SIMAS
                     </a>
                 </div>
 
                 <!-- Card 5: Wakaf -->
-                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
-                    <div class="w-12 h-12 bg-teal-50 text-teal-500 rounded-xl flex items-center justify-center text-2xl mb-5">
+                <div class="group bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-teal-50 text-teal-500 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-teal-500 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-hand-holding-heart"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4 line-clamp-2">Pelayanan Wakaf (AIW)</h3>
@@ -231,30 +231,30 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-teal-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Pergantian Nazhir Wakaf</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-teal-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Pendataan Tanah Wakaf Bersertifikat</span></li>
                     </ul>
-                    <a href="LINK_PANDUAN_WAKAF" target="_blank" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-teal-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-teal-50 transition-colors">
+                    <a href="#" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-teal-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-teal-500 hover:text-white transition-colors duration-300">
                         <i class="fas fa-file-alt mr-2"></i> Syarat Pendaftaran AIW
                     </a>
                 </div>
 
                 <!-- Card 6: Sertifikasi Halal -->
-                <div class="bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-md transition-shadow flex flex-col">
-                    <div class="w-12 h-12 bg-purple-50 text-purple-500 rounded-xl flex items-center justify-center text-2xl mb-5">
+                <div class="group bg-white p-7 rounded-2xl shadow-sm border border-gray-100 hover:shadow-xl hover:-translate-y-1 transition-all duration-300 flex flex-col">
+                    <div class="w-12 h-12 bg-purple-50 text-purple-500 rounded-xl flex items-center justify-center text-2xl mb-5 group-hover:scale-110 group-hover:bg-purple-500 group-hover:text-white transition-all duration-300">
                         <i class="fas fa-certificate"></i>
                     </div>
                     <h3 class="text-xl font-bold text-gray-900 mb-4 line-clamp-2">Jaminan Produk Halal</h3>
                     <ul class="space-y-3 text-sm text-gray-600 mb-6 flex-grow">
-                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Konsultasi Sertifikasi Halal Gratis (SEHATI)</span></li>
+                        <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Konsultasi Sertifikasi Halal (SEHATI)</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Pendampingan PPH (Proses Produk Halal)</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Pendataan Pelaku Usaha UMK</span></li>
                     </ul>
-                    <a href="LINK_PORTAL_HALAL" target="_blank" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-purple-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-purple-50 transition-colors">
+                    <a href="#" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-purple-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-purple-500 hover:text-white transition-colors duration-300">
                         <i class="fas fa-external-link-alt mr-2"></i> Portal BPJPH
                     </a>
                 </div>
             </div>
         </section>
 
-        <!-- 4. PROFILE & TRANSPARENCY (Disembunyikan kodenya sebentar agar file tidak kepanjangan, tetap menggunakan kode yang lama) -->
+        <!-- 4. PROFILE & TRANSPARENCY -->
         <section class="bg-white rounded-3xl shadow-lg border border-gray-200 overflow-hidden">
             <div class="grid grid-cols-1 lg:grid-cols-2">
                 <div class="p-8 md:p-10 bg-kemenag-50/50">
@@ -266,7 +266,7 @@
                         <p>KUA Kecamatan Candisari berkomitmen memberikan pelayanan prima di bidang urusan agama Islam, dengan visi terwujudnya masyarakat Candisari yang taat beragama, rukun, cerdas, dan sejahtera lahir batin.</p>
                     </div>
                     
-                    <div class="bg-white p-5 rounded-2xl border border-kemenag-100 flex items-center shadow-sm">
+                    <div class="bg-white p-5 rounded-2xl border border-kemenag-100 flex items-center shadow-sm hover:shadow-md transition-shadow">
                         <div class="w-16 h-16 bg-kemenag-100 rounded-full mr-5 flex-shrink-0 flex items-center justify-center overflow-hidden border-2 border-white shadow">
                             <i class="fas fa-user-tie text-3xl text-kemenag-500 mt-2"></i>
                         </div>
@@ -288,13 +288,13 @@
                     </div>
                     
                     <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 flex flex-col justify-center">
+                        <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 flex flex-col justify-center hover:bg-white hover:shadow-md transition-all cursor-default">
                             <div class="flex items-center text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">
                                 <i class="fas fa-rings mr-2"></i> Total Akad
                             </div>
-                            <div class="text-3xl font-extrabold text-kemenag-600">42 <span class="text-sm font-normal text-gray-400">pasang</span></div>
+                            <div class="text-3xl font-extrabold text-kemenag-600">32 <span class="text-sm font-normal text-gray-400">pasang</span></div>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 flex flex-col justify-center">
+                        <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 flex flex-col justify-center hover:bg-white hover:shadow-md transition-all cursor-default">
                             <div class="flex items-center text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">
                                 <i class="fas fa-file-invoice-dollar mr-2"></i> PNBP
                             </div>
@@ -302,26 +302,14 @@
                         </div>
                     </div>
 
-                    <a href="#" class="w-full bg-gray-900 text-white font-semibold py-4 px-4 rounded-xl text-center hover:bg-gray-800 transition-all shadow-md flex justify-center items-center group">
-                        <i class="fas fa-clipboard-list mr-2 text-yellow-400 group-hover:scale-110 transition-transform"></i> Survei Kepuasan Masyarakat
+                    <a href="https://forms.gle/jU38FsLHnJ583QCQ7" target="_blank" class="w-full bg-gray-900 text-white font-semibold py-4 px-4 rounded-xl text-center hover:bg-gray-800 hover:shadow-lg transition-all flex justify-center items-center group">
+                        <i class="fas fa-clipboard-list mr-2 text-yellow-400 group-hover:scale-125 transition-transform duration-300"></i> Survei Kepuasan Masyarakat
                     </a>
                 </div>
             </div>
         </section>
 
     </main>
-
-    <!-- FLOATING WHATSAPP BUTTON (BARU) -->
-    <a href="https://wa.me/6282221280538?text=Assalamualaikum%20KUA%20Candisari%2C%20saya%20mau%20konsultasi%20..." 
-       target="_blank" 
-       class="fixed bottom-6 right-6 bg-[#25D366] text-white w-16 h-16 rounded-full shadow-2xl hover:bg-[#20b858] hover:scale-110 transition-all duration-300 z-50 flex items-center justify-center group" 
-       title="Konsultasi WhatsApp">
-        <i class="fab fa-whatsapp text-4xl"></i>
-        <!-- Tooltip Text -->
-        <span class="absolute right-20 bg-gray-800 text-white text-sm px-3 py-1.5 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 whitespace-nowrap pointer-events-none hidden md:block">
-            Chat Admin KUA
-        </span>
-    </a>
 
     <!-- 5. FOOTER -->
     <footer class="bg-gray-900 text-gray-300 pt-16 pb-8 border-t-4 border-kemenag-500 mt-10">
@@ -384,7 +372,6 @@
                         Jl. Taman Teuku Umar No. 02, Tinjomoyo, Banyumanik, Kota Semarang, Jawa Tengah.
                     </p>
                     <div class="w-full h-40 bg-gray-800 rounded-xl border border-gray-700 overflow-hidden relative group">
-                        <!-- Menggunakan Embed Map Terbaru dari User -->
                         <iframe 
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3959.802906519257!2d110.41373757499748!3d-7.032437492969418!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e708b8dc5d53737%3A0x57fa9f506f25d040!2sKUA%20Kecamatan%20Candisari!5e0!3m2!1sen!2sid!4v1788171169078!5m2!1sen!2sid" 
                             width="100%" 
@@ -407,5 +394,29 @@
         </div>
     </footer>
 
+    <!-- SCRIPT UNTUK POPUP -->
+    <script>
+        // Memunculkan popup setelah 1 detik halaman dimuat
+        window.onload = function() {
+            setTimeout(function() {
+                const popup = document.getElementById('greetingPopup');
+                popup.classList.remove('opacity-0', 'pointer-events-none');
+                
+                const popupContent = popup.firstElementChild;
+                popupContent.classList.remove('scale-90');
+                popupContent.classList.add('scale-100');
+            }, 1000);
+        }
+
+        // Fungsi menutup popup
+        function closePopup() {
+            const popup = document.getElementById('greetingPopup');
+            popup.classList.add('opacity-0', 'pointer-events-none');
+            
+            const popupContent = popup.firstElementChild;
+            popupContent.classList.remove('scale-100');
+            popupContent.classList.add('scale-90');
+        }
+    </script>
 </body>
 </html>
