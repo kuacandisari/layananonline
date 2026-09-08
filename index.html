@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portal Layanan Digital - KUA Candisari</title>
+    <!-- Optimasi SEO: Deskripsi Portal -->
+    <meta name="description" content="Portal Layanan Digital KUA Kecamatan Candisari Kota Semarang. Pusat informasi pendaftaran nikah, layanan kemasjidan, wakaf, dan sertifikasi halal.">
     
     <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -51,7 +53,7 @@
     <!-- POPUP GREETING -->
     <div id="greetingPopup" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 opacity-0 pointer-events-none transition-opacity duration-500 backdrop-blur-sm px-4">
         <div class="bg-white rounded-3xl shadow-2xl max-w-sm w-full p-8 text-center transform scale-90 transition-transform duration-500 relative">
-            <button onclick="closePopup()" class="absolute top-4 right-5 text-gray-400 hover:text-gray-700 transition-colors">
+            <button onclick="closePopup()" class="absolute top-4 right-5 text-gray-400 hover:text-gray-700 transition-colors" title="Tutup">
                 <i class="fas fa-times text-xl"></i>
             </button>
             <div class="w-20 h-20 bg-green-50 text-kemenag-500 rounded-full flex items-center justify-center text-4xl mx-auto mb-5 border-4 border-green-100">
@@ -100,20 +102,19 @@
 
         <!-- 2. QUICK ACTION BUTTONS -->
         <section aria-label="Menu Utama" class="-mt-20 relative z-10">
-            <!-- Diubah menjadi 4 kolom untuk menambahkan Daftar Nikah (SIMKAH) -->
             <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
                 
                 <!-- Action 1 (SIMKAH) -->
                 <a href="https://simkah4.kemenag.go.id/" target="_blank" class="group bg-white rounded-2xl shadow-xl p-5 md:p-6 flex flex-col items-center justify-center border-b-4 border-yellow-500 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <div class="w-14 h-14 md:w-16 md:h-16 bg-yellow-50 text-yellow-600 rounded-full flex items-center justify-center text-2xl md:text-3xl mb-3 md:mb-4 group-hover:bg-yellow-500 group-hover:text-white group-hover:scale-110 transition-all duration-300">
-                        <i class="fas fa-ring"></i>
+                    <div class="w-16 h-16 md:w-20 md:h-20 mb-3 md:mb-4 transition-transform duration-300 group-hover:scale-110 flex items-center justify-center">
+                        <!-- Gunakan file logo SIMKAH Anda di bawah ini -->
+                        <img src="logo-simkah.png" alt="Logo SIMKAH" class="w-full h-full object-contain drop-shadow-md">
                     </div>
                     <h3 class="text-sm md:text-lg font-extrabold text-gray-900 text-center leading-tight">Daftar Nikah<br>Online (SIMKAH)</h3>
                 </a>
 
                 <!-- Action 2 (Jadwal Nikah) -->
                 <a href="https://script.google.com/macros/s/AKfycbxqEB5rCGInrYultYfmfVWCmfWTVTRDUPpfJLEJQiSgV0UfLs6ayukYgjVOY1I15gp7/exec" target="_blank" class="group bg-white rounded-2xl shadow-xl p-5 md:p-6 flex flex-col items-center justify-center border-b-4 border-kemenag-500 hover:-translate-y-2 hover:shadow-2xl transition-all duration-300 relative overflow-hidden">
-                    <!-- Animasi ping Live Data (Hanya tampil di layar agak besar agar tidak penuh di HP) -->
                     <div class="hidden md:flex absolute top-4 right-4 items-center">
                         <span class="relative flex h-3 w-3">
                           <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
@@ -183,6 +184,7 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Rekomendasi Nikah (Pindah Nikah)</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Prosedur Nikah Campuran (WNI/WNA)</span></li>
                     </ul>
+                    <!-- TODO: Masukkan URL -->
                     <a href="#" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-kemenag-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-kemenag-500 hover:text-white transition-colors duration-300">
                         <i class="fas fa-file-alt mr-2"></i> Panduan & Syarat
                     </a>
@@ -199,6 +201,7 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Konsultasi Keluarga Sakinah / BP4</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-kemenag-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Konsultasi Syariah & Keagamaan</span></li>
                     </ul>
+                    <!-- TODO: Masukkan URL -->
                     <a href="#" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-kemenag-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-kemenag-500 hover:text-white transition-colors duration-300">
                         <i class="fas fa-link mr-2"></i> Form Pendaftaran
                     </a>
@@ -247,6 +250,7 @@
                         <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Pendampingan PPH (Proses Produk Halal)</span></li>
                         <li class="flex items-start"><i class="fas fa-check-circle text-purple-500 mt-0.5 mr-2 flex-shrink-0"></i> <span>Pendataan Pelaku Usaha UMK</span></li>
                     </ul>
+                    <!-- TODO: Masukkan URL -->
                     <a href="#" class="inline-flex items-center justify-center w-full bg-gray-50 border border-gray-200 text-purple-600 font-semibold text-sm py-2 px-4 rounded-lg hover:bg-purple-500 hover:text-white transition-colors duration-300">
                         <i class="fas fa-external-link-alt mr-2"></i> Portal BPJPH
                     </a>
@@ -288,17 +292,25 @@
                     </div>
                     
                     <div class="grid grid-cols-2 gap-4 mb-8">
-                        <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 flex flex-col justify-center hover:bg-white hover:shadow-md transition-all cursor-default">
-                            <div class="flex items-center text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">
-                                <i class="fas fa-rings mr-2"></i> Total Akad
+                        <div class="bg-gradient-to-br from-kemenag-500 to-kemenag-600 p-5 rounded-2xl border border-kemenag-400 shadow-lg flex flex-col justify-center hover:-translate-y-1 hover:shadow-xl transition-all cursor-default text-white relative overflow-hidden">
+                            <!-- Aksen ornamen transparan -->
+                            <div class="absolute -right-4 -bottom-4 opacity-10">
+                                <i class="fas fa-rings text-6xl"></i>
                             </div>
-                            <div class="text-3xl font-extrabold text-kemenag-600">32 <span class="text-sm font-normal text-gray-400">pasang</span></div>
+                            <div class="flex items-center text-kemenag-100 text-xs font-semibold uppercase tracking-wider mb-2 relative z-10">
+                                <i class="fas fa-rings mr-2 opacity-80"></i> Total Akad
+                            </div>
+                            <div class="text-3xl font-extrabold text-white relative z-10"><span id="data-total-akad">32</span> <span class="text-sm font-medium text-kemenag-100">pasang</span></div>
                         </div>
-                        <div class="bg-gray-50 p-4 rounded-2xl border border-gray-100 flex flex-col justify-center hover:bg-white hover:shadow-md transition-all cursor-default">
-                            <div class="flex items-center text-gray-500 text-xs font-semibold uppercase tracking-wider mb-2">
-                                <i class="fas fa-file-invoice-dollar mr-2"></i> PNBP
+                        <div class="bg-gradient-to-br from-blue-500 to-blue-700 p-5 rounded-2xl border border-blue-400 shadow-lg flex flex-col justify-center hover:-translate-y-1 hover:shadow-xl transition-all cursor-default text-white relative overflow-hidden">
+                            <!-- Aksen ornamen transparan -->
+                            <div class="absolute -right-4 -bottom-4 opacity-10">
+                                <i class="fas fa-file-invoice-dollar text-6xl"></i>
                             </div>
-                            <div class="text-2xl font-extrabold text-blue-600">Terlaporkan</div>
+                            <div class="flex items-center text-blue-100 text-xs font-semibold uppercase tracking-wider mb-2 relative z-10">
+                                <i class="fas fa-file-invoice-dollar mr-2 opacity-80"></i> PNBP
+                            </div>
+                            <div class="text-2xl font-extrabold text-white relative z-10" id="data-pnbp">Terlaporkan</div>
                         </div>
                     </div>
 
@@ -380,6 +392,7 @@
                             allowfullscreen="" 
                             loading="lazy" 
                             referrerpolicy="strict-origin-when-cross-origin"
+                            title="Peta Lokasi KUA Candisari"
                             class="opacity-80 group-hover:opacity-100 transition-opacity duration-300">
                         </iframe>
                     </div>
@@ -396,26 +409,49 @@
 
     <!-- SCRIPT UNTUK POPUP -->
     <script>
-        // Memunculkan popup setelah 1 detik halaman dimuat
-        window.onload = function() {
-            setTimeout(function() {
-                const popup = document.getElementById('greetingPopup');
-                popup.classList.remove('opacity-0', 'pointer-events-none');
-                
-                const popupContent = popup.firstElementChild;
-                popupContent.classList.remove('scale-90');
-                popupContent.classList.add('scale-100');
-            }, 1000);
+        // --- 1. LOGIKA POPUP (SESSION STORAGE & AKSESIBILITAS) ---
+        const popup = document.getElementById('greetingPopup');
+        const popupContent = popup ? popup.firstElementChild : null;
+
+        function closePopup() {
+            if (popup) {
+                popup.classList.add('opacity-0', 'pointer-events-none');
+                if (popupContent) {
+                    popupContent.classList.remove('scale-100');
+                    popupContent.classList.add('scale-90');
+                }
+                // Simpan state di sessionStorage agar tidak muncul lagi selama sesi browser aktif
+                sessionStorage.setItem('popupShown', 'true');
+            }
         }
 
-        // Fungsi menutup popup
-        function closePopup() {
-            const popup = document.getElementById('greetingPopup');
-            popup.classList.add('opacity-0', 'pointer-events-none');
-            
-            const popupContent = popup.firstElementChild;
-            popupContent.classList.remove('scale-100');
-            popupContent.classList.add('scale-90');
+        // Tampilkan popup jika belum pernah ditutup di sesi ini
+        window.addEventListener('DOMContentLoaded', () => {
+            if (!sessionStorage.getItem('popupShown') && popup) {
+                setTimeout(function() {
+                    popup.classList.remove('opacity-0', 'pointer-events-none');
+                    if (popupContent) {
+                        popupContent.classList.remove('scale-90');
+                        popupContent.classList.add('scale-100');
+                    }
+                }, 1000);
+            }
+        });
+
+        // Tutup dengan tombol Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape' && popup && !popup.classList.contains('opacity-0')) {
+                closePopup();
+            }
+        });
+
+        // Tutup jika klik backdrop di luar area putih
+        if (popup) {
+            popup.addEventListener('click', function(event) {
+                if (event.target === popup) {
+                    closePopup();
+                }
+            });
         }
     </script>
 </body>
